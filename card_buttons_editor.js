@@ -1,12 +1,11 @@
-/* Deobfuscated: Card Buttons Editor v2.8.7 (@bylampa). Logic unchanged. */
 (function() {
   "use strict";
   Lampa.Platform.tv();
   (function() {
     "use strict";
     var manifest= {
-      "type":"other","version":"2.8.7","author":"@bylampa","name":"Card Buttons Editor","description":"Редактирование порядка, видимости, названий и группировка кнопок в карточке","component":"card_buttons_editor"
-    },STYLE_ID="card-buttons-editor-style",KEY_ORDER="card_buttons_order",KEY_HIDE="card_buttons_hide",KEY_SHOW_NAMES="card_buttons_show_names",KEY_TITLES="card_buttons_titles",KEY_ICONS="card_buttons_icons",KEY_ORIG_TITLES="card_buttons_original_titles",KEY_ORIG_ICONS="card_buttons_original_icons",KEY_FOLDERS="card_buttons_folders",KEY_FOLDER_TITLES="card_buttons_folder_titles",KEY_FOLDER_ICONS="card_buttons_folder_icons",KEY_FOLDER_HIDE="card_buttons_folder_hide",KEY_ITEM_ORDER="card_buttons_item_order",currentRender=null,_unused=null,lastFocusedButtonId=null,lastControllerName=null,allButtons=[],DEFAULT_SUBTITLES= {
+      "type":"other","version":"2.8.7","author":"@m4n4vi","name":"Card Buttons Editor","description":"Редактирование порядка, видимости, названий и группировка кнопок в карточке","component":"card_buttons_editor"
+    },STYLE_ID="card-buttons-editor-style-v2",KEY_ORDER="card_buttons_order",KEY_HIDE="card_buttons_hide",KEY_SHOW_NAMES="card_buttons_show_names",KEY_TITLES="card_buttons_titles",KEY_ICONS="card_buttons_icons",KEY_ORIG_TITLES="card_buttons_original_titles",KEY_ORIG_ICONS="card_buttons_original_icons",KEY_FOLDERS="card_buttons_folders",KEY_FOLDER_TITLES="card_buttons_folder_titles",KEY_FOLDER_ICONS="card_buttons_folder_icons",KEY_FOLDER_HIDE="card_buttons_folder_hide",KEY_ITEM_ORDER="card_buttons_item_order",currentRender=null,_unused=null,lastFocusedButtonId=null,lastControllerName=null,allButtons=[],DEFAULT_SUBTITLES= {
       "button--play":function v1() {
         return Lampa.Lang.translate("title_watch");
       },"button--book":function v2() {
@@ -1146,10 +1145,10 @@
     }
     
     function bootstrap() {
-      window.plugin_card_buttons_editor_ready=true,window.appready?start():Lampa.Listener.follow("app",function(v435) {
+      window.plugin_card_buttons_editor_ready_v2=true,window.appready?start():Lampa.Listener.follow("app",function(v435) {
         if(v435.type==="ready")start();
       });
     }
-    !window.plugin_card_buttons_editor_ready&&bootstrap();
+    !window.plugin_card_buttons_editor_ready_v2&&bootstrap();
   }());
 })();
